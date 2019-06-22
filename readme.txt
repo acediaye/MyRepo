@@ -16,6 +16,7 @@ git commit -m: saves comment message without vim
 git commit -a: any changes to files that are currently tracked will be automatically staged, new files wont be staged and need to be manually added
 
 git rm -r <filename.txt>: remove a file or folder
+git rm --cached <filename>: remove a file from staged
 
 git log: commit history, list out commits and their details like author, date, and comment messages
 git diff <source> <targetbranch>: preview changes before merging
