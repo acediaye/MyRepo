@@ -51,3 +51,10 @@ git pull origin: automatically fetch and merge the changes from the remote branc
 	before pushing need to commit
 git push origin master: save local changes to the remote repository known as origin in master branch
 	need to login credentials
+
+	Go back previous versions
+git checkout -b my_release <commit-id>
+	...prepare code for release...
+	...release code...
+git checkout master
+git merge my_release
