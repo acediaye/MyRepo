@@ -15,26 +15,32 @@ git commit: vim popup for comment message. i: insert, esc: exit insert mode, :w 
 git commit -m: saves comment message without vim
 git commit -a: any changes to files that are currently tracked will be automatically staged, new files wont be staged and need to be manually added
 
+git rm -r <filename.txt>: remove a file or folder
+
 git log: commit history, list out commits and their details like author, date, and comment messages
+git diff <source> <targetbranch>: preview changes before merging
 
 git branch: list branches
 git branch <branchname>: creates new branch with name
 git branch -d <branch name>: delete a branch
 git checkout <branchname>: switch to branchname, or switch to master branch
-	before merge need to make sure that you are on the destination branch
 
+	before merge need to make sure that you are on the destination branch
 git merge <source branch>: merge source branch to destination
 	conflicts: head is the version in the current branch, master is the version in the source branch
+git merge <source> <target branch>: merge a branch into target branch
 git mergetool: need external program to help merge conflicts ie tortisemerge, winmerge
 
 git stash: take dirty state of branch including tracked modifications and staged changes and saves it on a stack of unfinished changes that can be reapplied at any time
 	when we add and commit then switch to different branch, files disappear/appears
 	when we makes changes but dont commit them, the changes remain in the branches
 git stash apply: reapply changes from the stash to branch
+git stash clear: remove all stashed entries
 
 git remote: list remote repositories
 git remote -v: list fetch and push remote repos with alias origin
 git remote add <aliasname> <url>: add additional remote repositories
+git remote set-url <aliasname> <url>:  set repo alias to new url
 git clone <https://github.com/<name>/<repo>.git: copy remote repository to local folder, inclcudes commit history
 
 git fetch origin: go to server and get any changes made since last clones or fetched
