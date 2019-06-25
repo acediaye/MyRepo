@@ -19,6 +19,7 @@ git rm -r <filename.txt>: remove a file or folder
 git rm --cached <filename>: remove a file from staged
 
 git log: commit history, list out commits and their details like author, date, and comment messages
+git log --oneline: shortened commit history
 git diff <source> <targetbranch>: preview changes before merging
 
 git branch: list branches
