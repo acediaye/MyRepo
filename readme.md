@@ -34,7 +34,7 @@ git branch -d <branch name>: delete a branch\
 git checkout <branchname>: switch to branchname, or switch to master branch
 
 ## git merge
-* before merge need to make sure that you are on the destination branch\
+	* before merge need to make sure that you are on the destination branch\
 git merge <source branch>: merge source branch to destination\
 	* conflicts: head is the version in the current branch, master is the version in the source branch\
 git merge <source> <target branch>: merge a branch into target branch\
