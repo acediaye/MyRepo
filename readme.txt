@@ -17,6 +17,7 @@ git commit -a: any changes to files that are currently tracked will be automatic
 
 git rm -r <filename.txt>: remove a file or folder
 git rm --cached <filename>: remove a file from staged
+git rm -r --cached .: reset all repo
 
 git log: commit history, list out commits and their details like author, date, and comment messages
 git log --oneline: shortened commit history
@@ -59,3 +60,6 @@ git checkout -b my_release <commit-id>
 	...release code...
 git checkout master
 git merge my_release
+
+learn how to readme.md
+https://www.makeareadme.com/
