@@ -11,7 +11,7 @@ git status: tells what branch you are in, untracked files, changes not staged fo
 ## git add/commit
 git add: tells git to stage file, when you add you save the version of the file at that time\
 git add .   tells git to stage everything\
-			use .gitignore file to exclude files or file types ie *.log\
+			* use .gitignore file to exclude files or file types ie *.log\
 git add *.html     tells git to stage only files with html\
 git commit: vim popup for comment message. i: insert, esc: exit insert mode, :w save, :q quit vim\
 git commit -m: saves comment message without vim\
@@ -34,16 +34,16 @@ git branch -d <branch name>: delete a branch\
 git checkout <branchname>: switch to branchname, or switch to master branch
 
 ## git merge
-	before merge need to make sure that you are on the destination branch\
+* before merge need to make sure that you are on the destination branch\
 git merge <source branch>: merge source branch to destination\
-	conflicts: head is the version in the current branch, master is the version in the source branch\
+	* conflicts: head is the version in the current branch, master is the version in the source branch\
 git merge <source> <target branch>: merge a branch into target branch\
 git mergetool: need external program to help merge conflicts ie tortisemerge, winmerge
 
 ## git stash
 git stash: take dirty state of branch including tracked modifications and staged changes and saves it on a stack of unfinished changes that can be reapplied at any time\
-	when we add and commit then switch to different branch, files disappear/appears\
-	when we makes changes but dont commit them, the changes remain in the branches\
+	* when we add and commit then switch to different branch, files disappear/appears\
+	* when we makes changes but dont commit them, the changes remain in the branches\
 git stash apply: reapply changes from the stash to branch\
 git stash clear: remove all stashed entries
 
@@ -56,21 +56,48 @@ git clone <https://github.com/<name>/<repo>.git: copy remote repository to local
 
 ## git fetch/pull/push
 git fetch origin: go to server and get any changes made since last clones or fetched\
-	need to manually merge it into your work\
+	* need to manually merge it into your work\
 git fetch <alias name>: copy from remote repo to local repo\
 git pull origin: automatically fetch and merge the changes from the remote branch into current branch\
-	before pushing need to commit\
+	* before pushing need to commit\
 git push origin master: save local changes to the remote repository known as origin in master branch\
-	need to login credentials\
+	need to login credentials
 
 ## git Go back previous versions
-git checkout -b my_release <commit-id>
-	...prepare code for release...
-	...release code...
-git checkout master
+git checkout -b my_release <commit-id>\
+	* ...prepare code for release...\
+	* ...release code...\
+git checkout master\
 git merge my_release
 
 # learn how to readme.md
+# spacing
+```bash
+hello  (<-- two spaces)
+world
+```
+gives newline
+```bash
+hello (<-- 1 space)
+world
+```
+gives spacebar
+```bash 
+hello<br/>
+world
+```
+gives newline
+```bash
+hello
+
+world
+```
+gives 2 newline
+```bash
+hello\
+world
+```
+gives newline
 
 ## reference
 [makereadme](https://www.makeareadme.com/)
