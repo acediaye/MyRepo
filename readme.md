@@ -1,14 +1,14 @@
-#learn how to git
+# learn how to git
 
 https://www.youtube.com/watch?v=Y9XZQO1n_7c
 git uses a local file base set up
 need to backup manually or commit to a remote repository
 
-##git start
+## git start
 git init: .git where git stores everything including changes sets, branches\
 git status: tells what branch you are in, untracked files, changes not staged for commit
 
-##git add/commit
+## git add/commit
 git add: tells git to stage file, when you add you save the version of the file at that time\
 git add .   tells git to stage everything\
 			use .gitignore file to exclude files or file types ie *.log\
@@ -17,12 +17,12 @@ git commit: vim popup for comment message. i: insert, esc: exit insert mode, :w 
 git commit -m: saves comment message without vim\
 git commit -a: any changes to files that are currently tracked will be automatically staged, new files wont be staged and need to be manually added
 
-##git remove
+## git remove
 git rm -r <filename.txt>: remove a file or folder\
 git rm --cached <filename>: remove a file from staged\
 git rm -r --cached .: reset all repo
 
-##git commit history
+## git commit history
 git log: commit history, list out commits and their details like author, date, and comment messages\
 git log --oneline: shortened commit history\
 git diff <source> <targetbranch>: preview changes before merging
