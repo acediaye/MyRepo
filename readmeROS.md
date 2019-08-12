@@ -34,6 +34,7 @@ roscore: start ROS master
 rosrun beginner_tutorial talker: run node talker from begineer_tutorial package\
 rosrun beginner_tutorial listener: run node listener from beginner_tutorial package
 
+
 ## ROS node
 rosnode list: shows all active nodes\
 rosnode info talker: shows info of talker ie pub, sub, services, connections
@@ -61,3 +62,35 @@ devel: development space where build targets are placed(before being installed)
 ## ROS etc
 catkin config: catkin workspace setup can be checked with
 
+## ROS launch
+roslaunch package_name file_name.launch: auto starts roscore, run multiple nodes and parameters
+```bash
+<launch>
+	<node name="listener" pkg="beginner_tutorials" type="talker" output="screen"/>
+	<node name="talker" pkg="beginner_tutorials" type="listener" output="screen"/>
+</launch>
+```
+
+* launch: root element of launch file
+* node: each (node) tag spcifies a node to be launched
+* name: name of the node (free to choose)
+* pkg: package containing the node
+* type: type of the node, there must be a corresponding executable with the same name
+* output: specifies where to output log messages (screen: console, log: logfile)
+
+parameters
+```bash
+<arg name="arg_name" default="default_value"/>
+```
+
+## Gazebo simulator
+Simulate 3d rigid body dynamics, for robots and environments, extensible with plugins
+```bash
+$ rosrun gazebo_ros gazebo_ros
+```
+
+## RQT
+GUI shows all nodes and topics and how they are connected 
+```bash 
+$ rqt_graph
+```
