@@ -67,7 +67,7 @@ git fetch origin: go to server and get any changes made since last clones or fet
 
 * need to manually merge it into your work
 
-git fetch (alias name): copy from remote repo to local repo\
+git fetch (alias name): copy from remote repo to choosen repo\
 git pull origin: automatically fetch and merge the changes from the remote branch into current branch
 
 * before pushing need to commit

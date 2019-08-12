@@ -1,6 +1,6 @@
 # Learn how to ROS
 
-https://www.youtube.com/watch?v=0BxVPCInS3M
+https://www.youtube.com/watch?v=0BxVPCInS3M \
 catkin is the ROS build system to generate executables, libraries, and interfaces
 
 ## ROS setup workspace
@@ -25,7 +25,7 @@ $ echo $ROS_PACKAGE_PATH
 
 ## ROS create package with name and dependencies flag
 ```bash
-$ catkin_create_pkg pkg_name roscpp
+$ catkin_create_pkg package_name roscpp
 ```
 
 * package_name
@@ -99,7 +99,64 @@ $ rosrun gazebo_ros gazebo_ros
 ```
 
 ## RQT
-GUI shows all nodes and topics and how they are connected 
-```bash 
-$ rqt_graph
+rosrun rqt_gui rqt_gui: custom interface can be setup\
+rosrun rqt_image_view rqt_image_view: raw image from camera\
+rosrun rqt_multiplot rqt_multiplot: visualizing numeric vlues in 2d plots\
+rosrun rqt_graph rqt_graph: visualizing the ROS nodes and topic connection graph\
+rosrun rqt_console rqt_console: display and filter ROS messages\
+rosrun rqt_logger_level rqt_logger_level: configure logger level of ROS nodes
+
+## RVIZ
+3d visualization tool for ROS, subscribe to topics and visualizes the message contents, plugin\
+add topic, fixed frame, choose topic for the display, change display options
+```bash
+$ rosrun rviz rviz
+```
+
+## ROS parameter
+parameters can be defined in launch files or yaml files\
+rosparam list: list all parameters\
+rosparam get parameter_name\
+rosparam set parameter_name value
+
+## TF transformation system
+
+* tool for keeping track of coordinate frames over time
+* maintains relationship between coordinate frames in a tree structure
+* lets user transform points, vectors, etc between coordinate frames at desired time
+* implemented as publisher/subscriber model on topics /tf, /tf_static
+
+tf2_msgs/TFMessage.msg\
+rosrun tf tf_monitor: print transform tree\
+rosrun tf tf_echo source_frame target_frame: print info about transform between 2 frames\
+rosrun tf new_frames: visual graph of transform tree
+
+## Robot Models, Unified Robot Description Format (URDF)
+defines an XML format for representing a robot model\
+URDF generation can be scripted with XACRO\
+description consists of link elemets connected by joints
+
+* kinematic and dynamic description
+* visual representation
+* collision model
+
+## Simulation description format (SDF)
+defines an XML format to describe\
+SDF standard format for gazebo\
+gazebo converts URDF to SDF automatically
+
+* environments (lighting, gravity, etc)
+* objects (static, dynamic)
+* sensors
+* robots
+
+## ROS service
+request/response communication between nodes is done with services\
+rosservice list: shows all services\
+rosservice type service_name: shows type of service\
+rosservice call service_name args: call a service with request content\
+```bash
+request
+---
+response
 ```
