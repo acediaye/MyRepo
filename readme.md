@@ -1,4 +1,4 @@
-# learn how to git
+# Learn how to git
 
 https://www.youtube.com/watch?v=Y9XZQO1n_7c
 git uses a local file base set up
