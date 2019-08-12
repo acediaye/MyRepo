@@ -11,7 +11,7 @@ git status: tells what branch you are in, untracked files, changes not staged fo
 ## git add/commit
 git add: tells git to stage file, when you add you save the version of the file at that time\
 git add .   tells git to stage everything\
-* use .gitignore file to exclude files or file types ie *.log\\
+* use .gitignore file to exclude files or file types ie *.log
 git add *.html:		tells git to stage only files with html\
 git commit: vim popup for comment message. i: insert, esc: exit insert mode, :w save, :q quit vim\
 git commit -m: saves comment message without vim\
