@@ -37,12 +37,18 @@ $ catkin_create_pkg package_name roscpp
   * CMakeLists.txt (cmake build file)
   * package.xml (package info)
 
+## ROS navigating filesystem
+rospack find package_name: returns path to package\
+roscd package_name: change directory to package path\
+rosls: lists file in package\
+rosmsg: provides info on ROS message definition\
+rossrv: provides info on ROS service definition
+
 ## ROS run
 roscore: start ROS master
 
 rosrun beginner_tutorial talker: run node talker from begineer_tutorial package\
 rosrun beginner_tutorial listener: run node listener from beginner_tutorial package
-
 
 ## ROS node
 rosnode list: shows all active nodes\
