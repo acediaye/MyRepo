@@ -1,6 +1,6 @@
 # Learn how to git
 
-https://www.youtube.com/watch?v=Y9XZQO1n_7c\
+https://www.youtube.com/watch?v=Y9XZQO1n_7c \
 git uses a local file base set up\
 need to backup locally or commit to a remote repository
 
@@ -60,7 +60,7 @@ git remote: list remote repositories\
 git remote -v: list fetch and push remote repos with alias origin\
 git remote add <aliasname> <url>: add additional remote repositories\
 git remote set-url <aliasname> <url>:  set repo alias to new url\
-git clone <https://github.com/<name>/<repo>.git: copy remote repository to local folder, inclcudes commit history
+git clone https://github.com/name/repo.git: copy remote repository to local folder, inclcudes commit history
 
 ## git fetch/pull/push
 git fetch origin: go to server and get any changes made since last clones or fetched
@@ -74,7 +74,7 @@ git pull origin: automatically fetch and merge the changes from the remote branc
 
 git push origin master: save local changes to the remote repository known as origin in master branch
 
-*need to login credentials
+* need to login credentials
 
 ## git Go back previous versions
 git checkout -b my_release <commit-id>
