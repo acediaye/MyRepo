@@ -39,7 +39,7 @@ int main(int argc, char** argv){
 	while(ros::ok()){									<-returns false if SIGINT is received (ctrl c) or ros::shutdown()
 		std_msgs::String msg;
 		msg.data = "hello world " + std::to_string(count);
-		ROS_INFO_STREAM(msg.data);							<-logs messages to filesystem
+		ROS_INFO_STREAM(msg.data);						<-logs messages to filesystem
 		chatter_pub.publish(msg);
 		ros::spinOnce();								<-process incoming messages via callbacks
 		loop_rate.sleep();								<-sleep for the remaining time to get desired Hz
