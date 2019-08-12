@@ -119,3 +119,4 @@ world
 ## reference
 [makereadme](https://www.makeareadme.com/)
 [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+[syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
