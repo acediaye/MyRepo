@@ -88,7 +88,6 @@ git merge my_release
 # Learn how to readme.md
 
 ## spacing
-
 gives newline
 ```bash
 hello  (<-- two spaces)

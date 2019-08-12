@@ -23,10 +23,19 @@ $ echo $ROS_PACKAGE_PATH
 /home/user/catkin_ws/src:/opt/ros/kinetic/share
 ```
 
-## ROS create package with name and cpp flag
+## ROS create package with name and dependencies flag
 ```bash
 $ catkin_create_pkg pkg_name roscpp
 ```
+
+* package_name
+  * config (parameter files ie yaml)
+  * include (c++ include headers)
+  * launch (launch files)
+  * src (source files)
+  * test (ROS test)
+  * CMakeLists.txt (cmake build file)
+  * package.xml (package info)
 
 ## ROS run
 roscore: start ROS master
