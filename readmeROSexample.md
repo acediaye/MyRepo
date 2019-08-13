@@ -82,6 +82,13 @@ ROS_INFO_STREAM("Result: " << result);
 
 ## ROS C++ server
 add_two_ints_server.cpp
+service file
+```bash
+int64 a
+int64 b
+---
+int64 sum
+```
 ```bash
 #include "ros/ros.h"
 #include "beginner_tutorials/AddTwoInts.h"
@@ -129,3 +136,33 @@ int main(int argc, char **argv){
     return 0;
 }
 ```
+
+## ROS actions (actionlib)
+					    (action)
+[node 1/action client]----goal-->[node 2/action server]
+					  --cancel-->
+					  <--status--
+					  <--result--
+					  <-feedback-
+action file
+```bash
+goal
+---
+result
+---
+feedback
+```
+
+* similar to service calls, but provide possibility to
+  * cancel the task preemptively
+  * receive feedback on the progress
+* best way to implement interfaces to time extended, goal oriented behaviors
+* similar in structure to services, action are defined in *.action files
+* internally actions are implemented with a set of topics
+
+## ROS chart
+|        | Parameters | Dynamic Reconfigure | Topics | Services | Actions |
+|        | --- | --- | --- | --- | --- |
+|description| global constant parameters | local, changeable parameters | coninuous data streams | blocking call for processing a request | non blocking preemptable goal oriented tasks
+|application| constant settings | tuning parameters | one way continuous data flow | short triggers or calculations | task executions and robot actions |
+|examples| topic names, camera setting, calibration data, robot setup | controller parameters | sensor data, robot state | trigger change, request state, compute quantity | navigation, grasping, motion execution |
