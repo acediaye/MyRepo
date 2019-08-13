@@ -160,7 +160,8 @@ gazebo converts URDF to SDF automatically
 request/response communication between nodes is done with services\
 rosservice list: shows all services\
 rosservice type service_name: shows type of service\
-rosservice call service_name args: call a service with request content\
+rosservice show package_name/service_name: shows definition\ 
+rosservice call service_name args: call a service with requested content, each arg per line\
 ```bash
 request
 ---

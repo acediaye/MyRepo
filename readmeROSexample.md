@@ -25,7 +25,7 @@ add_executable(${PROJECT_NAME} src/${PROJECT_NAME}.cpp)		<-declare a c++ executa
 target_link_liraries(${PROJECT_NAME} ${catkin_LIBRARIES})	<-specify libraries to link the executable against
 ```
 
-## ROS C++ server
+## ROS C++ publisher
 talker.cpp
 ```bash
 #include "ros/ros.h"									<-ROS main header file
@@ -49,7 +49,7 @@ int main(int argc, char** argv){
 }
 ```
 
-## ROS C++ client
+## ROS C++ subscriber
 lisener.cpp
 ```bash
 #include "ros/ros.h"
@@ -80,3 +80,52 @@ ROS_INFO_STREAM("Result: " << result);
 * error
 * fatal
 
+## ROS C++ server
+add_two_ints_server.cpp
+```bash
+#include "ros/ros.h"
+#include "beginner_tutorials/AddTwoInts.h"
+bool add (beginner_tutorials::AddTwoInts::Request  &req,					<-when service request is received, callback function is called with request as arg
+		  beginner_tutorials::AddTwoInts::Response &res){
+	res.sum = req.a + req.b;												<-fill in response to req arg
+    ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
+    ROS_INFO("sending back response: [%ld]", (long int)res.sum);
+    return true;															<-return true to indicate that it has executed properly
+} 
+int main(int argc, char **argv){
+	ros::init(argc, argv, "add_two_ints_server");
+    ros::NodeHandle n;
+    ros::ServiceServer service = n.advertiseService("add_two_ints", add);	<-advertise(sevice_name, callback_function)
+    ROS_INFO("Ready to add two ints.");
+    ros::spin(); 
+    return 0;
+}
+```
+
+## ROS C++ client
+add_two_ints_client.cpp
+```bash
+#include "ros/ros.h"
+#include "beginner_tutorials/AddTwoInts.h"
+#include <cstdlib> 
+int main(int argc, char **argv){
+	ros::init(argc, argv, "add_two_ints_client");
+    if (argc != 3){
+		ROS_INFO("usage: add_two_ints_client X Y");
+        return 1;
+    }
+    ros::NodeHandle n;
+    ros::ServiceClient client = n.serviceClient<beginner_tutorials::AddTwoInts>("add_two_ints");	<-serviceClient<service_type>(service_name)
+    beginner_tutorials::AddTwoInts srv;																<-create service request contents service.request
+    srv.request.a = atoll(argv[1]);
+    srv.request.b = atoll(argv[2]);
+    if (client.call(srv)){																			<-call service with client.call(service)
+		ROS_INFO("Sum: %ld", (long int)srv.response.sum);											<-response is stored in service response
+    }
+    else{
+		ROS_ERROR("Failed to call service add_two_ints");
+        return 1;
+    } 
+    return 0;
+}
+```
