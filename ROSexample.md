@@ -138,12 +138,14 @@ int main(int argc, char **argv){
 ```
 
 ## ROS actions (actionlib)
+```
 					    (action)
 [node 1/action client]----goal-->[node 2/action server]
 					  --cancel-->
 					  <--status--
 					  <--result--
 					  <-feedback-
+```
 action file
 ```bash
 goal
@@ -167,3 +169,15 @@ feedback
 |Application| constant settings | tuning parameters | one way continuous data flow | short triggers or calculations | task executions and robot actions |
 |Examples| topic names, camera setting, calibration data, robot setup | controller parameters | sensor data, robot state | trigger change, request state, compute quantity | navigation, grasping, motion execution |
 
+## ROS time
+
+* to work with a simulated clock
+  * set the /use_sim_time true
+  > rosparam set use_sim_time true
+* publishs the time on the topic /clock from
+  * gazebo (default)
+  * ROS bag (--clock)
+* ROS time API
+  * ros::Time begin = ros::Time::now(); double secs = begin.toSec();
+  * ros::Duration duration(0.5); //0.5s
+  * ros::Rate rate(10); //10Hz
