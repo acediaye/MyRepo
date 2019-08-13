@@ -163,6 +163,6 @@ feedback
 ## ROS chart
 |        | Parameters | Dynamic Reconfigure | Topics | Services | Actions |
 | --- | --- | --- | --- | --- | --- |
-|description| global constant parameters | local, changeable parameters | coninuous data streams | blocking call for processing a request | non blocking preemptable goal oriented tasks
-|application| constant settings | tuning parameters | one way continuous data flow | short triggers or calculations | task executions and robot actions |
-|examples| topic names, camera setting, calibration data, robot setup | controller parameters | sensor data, robot state | trigger change, request state, compute quantity | navigation, grasping, motion execution |
+|Description| global constant parameters | local, changeable parameters | coninuous data streams | blocking call for processing a request | non blocking, preemptable goal oriented tasks
+|Application| constant settings | tuning parameters | one way continuous data flow | short triggers or calculations | task executions and robot actions |
+|Examples| topic names, camera setting, calibration data, robot setup | controller parameters | sensor data, robot state | trigger change, request state, compute quantity | navigation, grasping, motion execution |
