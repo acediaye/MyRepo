@@ -172,7 +172,7 @@ response
 suited for logging and recording datasets for later visualzation and analysis\
 binary format for storing message data
 
-> rosbag record --all: record all topics in a bag file
+> rosbag record --all: record all topics in a bag file\
 > rosbag record topic_1 topic_2 topic_3: record given topics
 
 stop recording with ctrl + c\
@@ -185,3 +185,6 @@ bagfiles are saved with start data and time as file names in current folder
 --rate=factor\
 --clock\
 --loop
+
+## Reference
+[ROS bag wiki](http://wiki.ros.org/rosbag/Commandline)
