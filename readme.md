@@ -88,8 +88,9 @@ git merge my_release
 ## git quick steps
 1. git init (use git status)
 2. git remote add origin (url)
-3. git commit -a -m 'my message'
-4. git push origin master
+3. git add .
+4. git commit -a -m 'my message'
+5. git push origin master
 
 # Learn how to readme.md
 
