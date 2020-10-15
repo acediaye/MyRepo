@@ -93,6 +93,7 @@ git merge my_release
 5. git push origin master
 
 # Learn how to readme.md
+https://guides.github.com/features/mastering-markdown/
 
 ## spacing
 gives newline
