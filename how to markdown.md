@@ -9,6 +9,10 @@ https://guides.github.com/features/mastering-markdown/
 ```
 
 ## unordered lists
+* item 1
+* item 2
+    * item 2a
+    * item 2b
 ```bash
 * item 1
 * item 2
@@ -17,14 +21,20 @@ https://guides.github.com/features/mastering-markdown/
 ```
 
 ## ordered lists
+1. item 1
+2. item 2
+    1. item 2a
+    2. item 2b
 ```bash
 1. item 1
 2. item 2
-    1 item 2a
-    2 item 2b
+    1. item 2a
+    2. item 2b
 ```
 
 ## task lists
+- [x] marked
+- [ ] unmarked
 ```bash
 - [x] marked
 - [ ] unmarked
@@ -36,9 +46,9 @@ print('hello world')
 ```
 
 ## images
-[name](url)
-```bash
 [google](www.google.com)
+```bash
+[name](url)
 ```
 
 ## spacing
