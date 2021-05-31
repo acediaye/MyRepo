@@ -1,6 +1,7 @@
 # how to use .gitignore
 
 ## Examples
+
 '''bash
 name.py
 *.txt
