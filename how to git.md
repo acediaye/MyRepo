@@ -10,11 +10,24 @@ git init # .git folder where git stores everything including changes sets, branc
 git status # tells what branch you are in, untracked files, changes not staged for commit
 ```
 
+## git quick steps
+1. git init (use git status)
+2. git remote add origin (url)
+3. git add .
+4. git commit -a -m 'my message'
+5. git push origin master
+
+## git at work
+1. git remote update
+2. git merge --ff-only
+3. git commit -a -m 'my message'
+4. git push gitlab branch
+
 ## git add/commit
 ```bash
 git add # tells git to stage file, when you add you save the version of the file at that time
 git add . # :tells git to stage everything
-# * use .gitignore file to exclude files or file types ie *.log
+# use .gitignore file to exclude files or file types ie *.log
 git add *.html # tells git to stage only files with html
 git commit # vim popup for comment message. i: insert, esc: exit insert mode, :w save, :q quit vim
 git commit -m # saves comment message without vim
@@ -29,32 +42,7 @@ git rm --cached (filename) # remove a file from staged
 git rm --cached -r # reset all repo
 ```
 
-## git commit history
-```bash
-git log # commit history, list out commits and their details like author, date, and comment messages
-git log --oneline # shortened commit history
-git diff (source) (targetbranch) # preview changes before merging
-```
-
-## git branch
-```bash
-git branch # list branches
-git branch (branchname) # creates new branch with name
-git branch -d (branch name) # delete a branch
-git checkout (branchname) # switch to branchname, or switch to master branch
-git checkout -b (branchname) # creates branch if does not exist
-```
-
-## git stash
-```bash
-git stash # take dirty state of branch including tracked modifications and staged changes and saves it on a stack of unfinished changes that can be reapplied at any time
-# when we add and commit then switch to different branch, files disappear/appears
-# when we makes changes but dont commit them, the changes remain in the branches
-git stash apply # reapply changes from the stash to branch
-git stash clear # remove all stashed entries
-```
-
-## git remote
+## git remote/clone
 ```bash
 git remote # list remote repositories
 git remote -v # list fetch and push remote repos with alias origin
@@ -75,7 +63,7 @@ git push origin master # save local changes to the remote repository known as or
 # need to login credentials
 ```
 
-## git merge
+## git merge/rebase
 ```bash
 # before merge need to make sure that you are on the destination branch
 git merge (source branch) # merge source branch to destination
@@ -83,11 +71,32 @@ git merge (source branch) # merge source branch to destination
 git merge (source) (target branch) # merge a branch into target branch
 git mergetool # need external program to help merge conflicts ie tortisemerge, winmerge
 git merge --ff-only # fast forward merge
+git rebase # if merge --ff-only failed, rebase commit puts current commit at end of history commit 
 ```
 
-## git rebase
+## git branch
 ```bash
-git rebase # if merge --ff-only failed, rebase commit puts current commit at end of history commit 
+git branch # list branches
+git branch (branchname) # creates new branch with name
+git branch -d (branch name) # delete a branch
+git checkout (branchname) # switch to branchname, or switch to master branch
+git checkout -b (branchname) # creates branch if does not exist
+```
+
+## git stash
+```bash
+git stash # take dirty state of branch including tracked modifications and staged changes and saves it on a stack of unfinished changes that can be reapplied at any time
+# when we add and commit then switch to different branch, files disappear/appears
+# when we makes changes but dont commit them, the changes remain in the branches
+git stash apply # reapply changes from the stash to branch
+git stash clear # remove all stashed entries
+```
+
+## git commit history
+```bash
+git log # commit history, list out commits and their details like author, date, and comment messages
+git log --oneline # shortened commit history
+git diff (source) (targetbranch) # preview changes before merging
 ```
 
 ## git Go back previous versions
@@ -98,16 +107,3 @@ git checkout -b my_release (commit-id)
 git checkout master
 git merge my_release
 ```
-
-## git quick steps
-1. git init (use git status)
-2. git remote add origin (url)
-3. git add .
-4. git commit -a -m 'my message'
-5. git push origin master
-
-## git at work
-1. git remote update
-2. git merge --ff-only
-3. git commit -a -m 'my message'
-4. git push gitlab branch
