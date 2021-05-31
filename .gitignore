@@ -1,2 +1,16 @@
 CMakeLists.txt
 loadimg.cpp
+
+# how to use .gitignore
+
+# untrack files already checked in
+# git rm --cached FILENAME or git rm --cached -r
+
+# *.extension_name
+# used to match all files with extension
+
+# **/any_name
+# used to match any file or directory with name
+
+# any_name/**
+# used to match anything inside directory
