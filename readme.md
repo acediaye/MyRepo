@@ -92,6 +92,12 @@ git merge my_release
 4. git commit -a -m 'my message'
 5. git push origin master
 
+## git at work
+1. git remote update
+2. git merge --ff-only
+3. git commit -a -m 'my message'
+4. git push gitlab branch
+
 # Learn how to readme.md
 https://guides.github.com/features/mastering-markdown/
 
