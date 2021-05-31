@@ -2,44 +2,44 @@
 https://guides.github.com/features/mastering-markdown/
 
 ## headers
-'''bash
+```bash
 # this is <h1> tag
 ## this is <h2> tag
 ...
-'''
+```
 
 ## unordered lists
-'''bash
+```bash
 * item 1
 * item 2
     * item 2a
     * item 2b
-'''
+```
 
 ## ordered lists
-'''bash
+```bash
 1. item 1
 2. item 2
     1 item 2a
     2 item 2b
-'''
+```
 
 ## task lists
-'''bash
+```bash
 - [x] marked
 - [ ] unmarked
-'''
+```
 
 ## code
-'''python
+```python
 print('hello world')
-'''
+```
 
 ## images
 [name](url)
-'''bash
+```bash
 [google](www.google.com)
-'''
+```
 
 ## spacing
 gives newline
