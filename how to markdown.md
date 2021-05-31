@@ -46,7 +46,7 @@ print('hello world')
 ```
 
 ## images
-[google](www.google.com)
+[google](https://www.google.com)
 ```bash
 [name](url)
 ```
