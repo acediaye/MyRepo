@@ -49,6 +49,7 @@ print('hello world')
 [google](https://www.google.com)
 ```bash
 [name](url)
+![alt text](.jpg)
 ```
 
 ## spacing
