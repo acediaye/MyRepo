@@ -1,2 +1,4 @@
 CMakeLists.txt
 loadimg.cpp
+__pycache__
+.vscode
